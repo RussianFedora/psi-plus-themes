@@ -1,8 +1,8 @@
-%define rev 20130124gitac60c0f
+%define rev 20130124gited95924
 
 Name:           psi-plus-themes
 Version:        0.16
-Release:        0.2.%{rev}%{?dist}
+Release:        0.1.%{rev}%{?dist}
 Epoch:          2
 BuildArch:      noarch
 Summary:        Themes for Psi+
@@ -30,7 +30,7 @@ mkdir -p $RPM_BUILD_ROOT%{_datadir}/psi-plus/
 %{_datadir}/psi-plus/themes/*
 
 %changelog
-* Thu Jan 24 2013 Ivan Romanov <drizt@land.ru> - 2:0.16-0.2.20130124gitac60c0f.R
+* Thu Jan 24 2013 Ivan Romanov <drizt@land.ru> - 2:0.16-0.1.20130124gited95924.R
 - dropped %%defattr
 - source tarball moved to i-inet
 
