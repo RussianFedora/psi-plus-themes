@@ -1,7 +1,7 @@
-%define rev 20120630gitac60c0f
+%define rev 20130124gitac60c0f
 
 Name:           psi-plus-themes
-Version:        0.15
+Version:        0.16
 Release:        0.2.%{rev}%{?dist}
 Epoch:          2
 BuildArch:      noarch
@@ -9,7 +9,7 @@ Summary:        Themes for Psi+
 
 License:        Unknown
 URL:            http://code.google.com/p/psi-dev/
-Source0:        %{name}-%{version}-20120630gitac60c0f.tar.gz
+Source0:        http://files.psi-plus.com/sources/%{name}-%{version}-%{rev}.tar.gz
 Source1:        generate-tarball.sh
 
 BuildRequires:  tar
@@ -27,10 +27,13 @@ mkdir -p $RPM_BUILD_ROOT%{_datadir}/psi-plus/
 %{__tar} xzf %{SOURCE0} -C $RPM_BUILD_ROOT%{_datadir}/psi-plus/
 
 %files
-%defattr(-,root,root,-)
 %{_datadir}/psi-plus/themes/*
 
 %changelog
+* Thu Jan 24 2013 Ivan Romanov <drizt@land.ru> - 2:0.16-0.2.20130124gitac60c0f.R
+- dropped %%defattr
+- source tarball moved to i-inet
+
 * Sat Jun 30 2012 Ivan Romanov <drizt@land.ru> - 0.15-0.2.20120630gitac60c0f.R
 - Updated to new git revision
 - %%{?dist} allready has R suffix.
