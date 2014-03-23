@@ -2,7 +2,7 @@
 
 Name:           psi-plus-themes
 Version:        0.16
-Release:        0.1.%{rev}%{?dist}
+Release:        0.2.%{rev}%{?dist}
 Epoch:          2
 BuildArch:      noarch
 Summary:        Themes for Psi+
@@ -27,9 +27,14 @@ mkdir -p $RPM_BUILD_ROOT%{_datadir}/psi-plus/
 %{__tar} xzf %{SOURCE0} -C $RPM_BUILD_ROOT%{_datadir}/psi-plus/
 
 %files
-%{_datadir}/psi-plus/themes/*
+%dir %{_datadir}/psi-plus/themes/chatview/psi/LunnaCat_Classic
+%{_datadir}/psi-plus/themes/chatview/psi/LunnaCat_Classic/*
+%{_datadir}/psi-plus/themes/chatview/psi/new_classic.theme
 
 %changelog
+* Sun Mar 23 2014 Arkady L. Shane <ashejn@russianfedora.ru> - 2:0.16-0.2.20130124gited95924.R
+- more deep pack to avoid conflicts with themes from psi-plus
+
 * Thu Jan 24 2013 Ivan Romanov <drizt@land.ru> - 2:0.16-0.1.20130124gited95924.R
 - dropped %%defattr
 - source tarball moved to i-inet
